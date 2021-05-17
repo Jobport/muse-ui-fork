@@ -1,4 +1,5 @@
-## Pushing changes to npm
+## Publishing to npm
+
 After merging your fix/patch/improvement/etc.. make sure you build the package with:
 
 ``npm run build``
