@@ -4,8 +4,6 @@ After merging your fix/patch/improvement/etc.. make sure you build the package w
 
 ``npm run build``
 
-We need the dist folder to be pushed to npm so make sure to remove the dist folder from your `.gitignore` before publishing.
-
 Bump the version of our muse package with:
 
 `npm version patch` or `npm version minor` or `npm version major`
