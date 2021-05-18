@@ -35,7 +35,7 @@ export default function (type = 'checkbox') { // checkbox
       },
       end (event) {
         if (this.disabled) return;
-        if (this.ripple) this.$refs.ripple.end();
+        if (this.ripple && this.$refs.ripple) this.$refs.ripple.end();
         if (event) this.$emit(event.type, event);
       },
       handleClick (e) {
