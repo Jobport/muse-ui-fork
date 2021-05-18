@@ -1,3 +1,18 @@
+## Publishing to npm
+
+After merging your fix/patch/improvement/etc.. make sure you build the package with:
+
+``npm run build``
+
+Bump the version of our muse package with:
+
+`npm version patch` or `npm version minor` or `npm version major`
+
+Choose patch/minor/major depending on the size/impact of the changes you have made.
+
+Publish the changes to npm with:
+
+``npm publish``
 
 <p align="center">
   <a href="https://muse-ui.org" target="_blank">
