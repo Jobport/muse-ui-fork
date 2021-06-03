@@ -29,6 +29,9 @@ export default {
   mounted () {
     this.trigger = this.$el;
   },
+  beforeDestroy () {
+    this.tooltipVM && this.tooltipVM.$destroy();
+  },
   methods: {
     addEventHandle (old, fn) {
       if (!old) {
@@ -76,7 +79,10 @@ export default {
     }
 
     const vnode = getFirstComponentChild(this.$slots.default);
-    if (!vnode) return vnode;
+    if (!vnode) {
+      this.active = false;
+      return vnode;
+    }
     vnode.data = vnode.data || {};
     const on = vnode.data.on = vnode.data.on || {};
     const nativeOn = vnode.data.nativeOn = vnode.data.nativeOn || {};
